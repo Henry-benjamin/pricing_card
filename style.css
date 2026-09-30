@@ -287,5 +287,54 @@ h3 {
   padding: 0;
   margin: 0;
   font-size: 0.9rem;
-  color: var(--primary-colors);
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  header {
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+    min-width: 400ox;
+    margin: 0 auto 40px;
+  }
+  .card,
+  .popular {
+    transform: none;
+  }
+  .card:hover,
+  .popular:hover {
+    transform: translateY(-5px);
+  }
+  .testimonial {
+    margin-top: 40px;
+  }
+  .quote {
+    padding: 30px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 rgb(74, 222, 128, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgb(74, 222, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 rgb(74, 222, 128, 0);
+  }
+}
+
+.btn-accent {
+  animation: pulse 2s infinite;
 }
